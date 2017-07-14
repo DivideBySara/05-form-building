@@ -34,13 +34,25 @@
 
       <section id="write" class="tab-content">
         <h1>Create New Article</h1>
-        <!-- TODO: Set up a form to accept user input for a new blog article. Remember that we need:
+        <!-- DONE: Set up a form to accept user input for a new blog article. Remember that we need:
                    1. Article tittle
                    2. Article body
                    3. Article author
                    4. Author's URL
                    5. Article category
-                   6. Some way to know if this article is a draft or is published -->
+                   6. Some way to know if this article is a draft or is published
+                 est: 15min act: 15min-->
+        <form>
+          <fieldset>
+            <legend>Placeholder Blog Article</legend>
+            <input type="text" placeholder="Title" />
+            <input type="text" placeholder="Author" />
+            <input type="text" placeholder="Author's URL" />
+            <input type="text" placeholder="Category" />
+            <textarea rows="10" placeholder="Write article here" /></textarea>
+            <label>Published? <input type="radio" /></label>
+          </fieldset>
+        </form>
       </section>
 
       <section id="articles" class="tab-content">
@@ -63,7 +75,7 @@
     <script src="/scripts/article.js"></script>
     <script src="/scripts/articleView.js"></script>
     <script>
-      // TODO: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
+      // DONE: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
       // (Look at the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages
       //that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
       //  Hint: Look in articleView.js for a function that does this.
