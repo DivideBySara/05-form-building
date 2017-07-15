@@ -86,18 +86,29 @@ articleView.initNewArticlePage = function() {
     this.select();
   });
 
-  // TODO: Add an event handler to update the preview and the article-export field if any inputs change.
+  // DONE: Add an event handler to update the preview and the article-export field if any inputs change.
+  // Completed in about 5 minutes
+
+  $('#articleForm').on('change', function(event) {
+    event.preventDefault();
+    var preview = articleView.create();
+    $('#articles').append(preview);
+  })
 };
 
 // this is the function that generates the preview and shows the export field
 articleView.create = function() {
   // DONE: Set up a var to hold the new article we are creating.
+  // Completed in 2 minutes
+
   let newArticle = {};
   // Clear out the #articles element, so we can put in the updated preview
   // est: 5min act: 1min
   $('#articles').empty();
 
-  // TODO: Instantiate an article based on what's in the form fields:
+  // DONE: Instantiate an article based on what's in the form fields:
+  // Completed in about 15 minutes
+
   newArticle.title = $('#title').val();
   newArticle.author = $('#author').val();
   newArticle.authorURL = $('#authorURL').val();
@@ -105,8 +116,14 @@ articleView.create = function() {
   newArticle.bodyText = $('#bodyText').val();
   newArticle.published = $('checkbox').val();
 
-  // TODO: Use our interface to the Handblebars template to put the article preview into the DOM:
+  // DONE: Use our interface to the Handblebars template to put the article preview into the DOM:
+  // Completed in about 15 minutes
 
+  var template = $('#newArticleTemplate').html();
+  var compiled = Handlebars.compile(template);
+  var html = compiled(newArticle);
+
+  return html;
 
   // TODO: The new articles we create will be shown as JSON in an element in our article-export section.
   // From there, we can copy/paste the JSON into our source data file.
