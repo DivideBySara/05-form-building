@@ -47,6 +47,11 @@ a:visited {
 =======================================*/
 /*DONE: Add the CSS needed to style the form
 est 15min act 15min*/
+form {
+  font-size: 150%;
+  line-height: 150%;
+}
+
 fieldset {
   margin: 1%;
   margin-left: 0;
@@ -59,19 +64,10 @@ fieldset * {
   margin: 1%;
 }
 
-input {
-  line-height: 150%;
-  font-size: 150%;
-}
-
 textarea {
   width: 100%;
   margin: auto;
   height: 200px;
-}
-
-label {
-  font-size: 150%;
 }
 
 label * {
