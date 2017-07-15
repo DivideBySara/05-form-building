@@ -45,4 +45,35 @@ a:visited {
 
 /*FORM STYLES
 =======================================*/
-/*TODO: Add the CSS needed to style the form*/
+/*DONE: Add the CSS needed to style the form
+est 15min act 15min*/
+fieldset {
+  margin: 1%;
+  margin-left: 0;
+  max-width: 800px;
+  border: 2px dashed black;
+}
+
+fieldset * {
+  display: block;
+  margin: 1%;
+}
+
+input {
+  line-height: 150%;
+  font-size: 150%;
+}
+
+textarea {
+  width: 100%;
+  margin: auto;
+  height: 200px;
+}
+
+label {
+  font-size: 150%;
+}
+
+label * {
+  display: inline;
+}
