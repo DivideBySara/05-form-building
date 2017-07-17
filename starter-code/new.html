@@ -21,6 +21,7 @@
         <h3>{{authorURL}}</h3>
         <h3>{{category}}</h3>
         <p>{{bodyText}}</p>
+        <p><em>{{published}}</em></p>
       </article>
     </script>
     </head>
@@ -55,7 +56,7 @@
                  est: 15min act: 15min-->
         <form id="articleForm">
           <fieldset>
-            <legend>Placeholder Blog Article</legend>
+            <legend>Write your new article below: </legend>
             <input id="title" type="text" placeholder="Title" />
             <input id="author" type="text" placeholder="Author" />
             <input id="authorURL" type="text" placeholder="Author's URL" />
@@ -71,9 +72,11 @@
       </section>
 
       <section id="article-export">
-        <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export
-        of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable
-        to allow easy selection of the text it holds. What kind of element could we use for this? -->
+        <!-- DONE: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
+        <!-- Completed in about 5 minutes. Used <input> to hold JSON data -->
+        <label id="json-label"> JSON Format:
+          <input type="text" id="article-json" value="">
+        </label>
       </section>
 
     </main>
