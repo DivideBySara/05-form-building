@@ -74,9 +74,16 @@ articleView.setTeasers = function() {
 };
 
 articleView.initNewArticlePage = function() {
-  // TODO: Make the tabs work. Right now, you're seeing all the tab content (items with a class of tab-content) on the page at once.
+  // DONE: Make the tabs work. Right now, you're seeing all the tab content (items with a class of tab-content) on the page at once.
   //The section with the id of "write" should show when the "write" tab is clicked; it is also the default and should be shown on page load.
   //The section with the id of "articles" should show when the "preview" tab is clicked.
+  // Completed - took about 10 minutes - Made it work at minimum
+  $('#articles').hide();
+  $('.tab').on('click', function(event) {
+    event.preventDefault();
+    $('.tab-content').hide();
+    $('#' + $(this).data('content')).show();
+  })
 
   // DONE: Hide the article-export section on page load
   // est: 5min act: 1min
@@ -93,6 +100,16 @@ articleView.initNewArticlePage = function() {
     event.preventDefault();
     var preview = articleView.create();
     $('#articles').append(preview);
+
+    // DONE: The new articles we create will be shown as JSON in an element in our article-export section.
+    // From there, we can copy/paste the JSON into our source data file.
+    // Set up this "export" functionality. When data is inputted into the form, that data should be converted to stringified JSON.
+    //Then, display that JSON in the element inside the article-export section. The article-export section was hidden on page load;
+    // make sure to show it as soon as data is entered in the form.
+    //Completed in about 25 minutes.
+    var stringified = JSON.stringify(preview);
+    $('#article-export').show();
+    $('#article-json').attr('value', stringified);
   })
 };
 
@@ -120,17 +137,12 @@ articleView.create = function() {
   // Completed in about 15 minutes
 
   var template = $('#newArticleTemplate').html();
+  console.log(template);
   var compiled = Handlebars.compile(template);
+  console.log(compiled);
   var html = compiled(newArticle);
-
+  console.log(html);
   return html;
-
-  // TODO: The new articles we create will be shown as JSON in an element in our article-export section.
-  // From there, we can copy/paste the JSON into our source data file.
-    // Set up this "export" functionality. When data is inputted into the form, that data should be converted to stringified JSON.
-    //Then, display that JSON in the element inside the article-export section. The article-export section was hidden on page load;
-    // make sure to show it as soon as data is entered in the form.
-
 };
 
 
