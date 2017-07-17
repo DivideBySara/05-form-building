@@ -131,17 +131,19 @@ articleView.create = function() {
   newArticle.authorURL = $('#authorURL').val();
   newArticle.category = $('#category').val();
   newArticle.bodyText = $('#bodyText').val();
-  newArticle.published = $('checkbox').val();
+  if ($('#published').is(':checked')) {
+    newArticle.published = 'Published';
+  } else {
+    newArticle.published = 'Draft';
+  }
+
 
   // DONE: Use our interface to the Handblebars template to put the article preview into the DOM:
   // Completed in about 15 minutes
 
   var template = $('#newArticleTemplate').html();
-  console.log(template);
   var compiled = Handlebars.compile(template);
-  console.log(compiled);
   var html = compiled(newArticle);
-  console.log(html);
   return html;
 };
 

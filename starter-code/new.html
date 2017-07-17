@@ -21,6 +21,7 @@
         <h3>{{authorURL}}</h3>
         <h3>{{category}}</h3>
         <p>{{bodyText}}</p>
+        <p><em>{{published}}</em></p>
       </article>
     </script>
     </head>
@@ -71,7 +72,7 @@
             <label class="newRow">Article Text:
               <textarea id="bodyText" rows="10" placeholder="Write article here" /></textarea>
             </label>
-            <label class="newRow">Published? <input type="checkbox" /></label>
+            <label class="newRow">Published? <input id="published" type="checkbox" value="yes"/></label>
           </fieldset>
         </form>
       </section>
