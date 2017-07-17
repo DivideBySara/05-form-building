@@ -18,6 +18,10 @@ hr {
   width: 80%;
 }
 
+footer {
+  margin-top: 40px;
+}
+
 /*TEXT STYLES
 =======================================*/
 p {
@@ -45,4 +49,11 @@ a:visited {
 
 /*FORM STYLES
 =======================================*/
-/*TODO: Add the CSS needed to style the form*/
+/*DONE: Add the CSS needed to style the form*/
+/*Completed in about 10 minutes - added basic, responsive css layout*/
+
+fieldset label {
+  display: block;
+  float: left;
+  margin: 20px;
+}

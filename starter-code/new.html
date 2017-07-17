@@ -62,16 +62,16 @@
             <label>Author:
               <input id="author" type="text" placeholder="Author" />
             </label>
-            <label>Author's URL:
+            <label class="newRow">Author's URL:
               <input id="authorURL" type="text" placeholder="Author's URL" />
             </label>
             <label>Category:
               <input id="category" type="text" placeholder="Category" />
             </label>
-            <label>Article Text:
+            <label class="newRow">Article Text:
               <textarea id="bodyText" rows="10" placeholder="Write article here" /></textarea>
             </label>
-            <label>Published? <input type="checkbox" /></label>
+            <label class="newRow">Published? <input type="checkbox" /></label>
           </fieldset>
         </form>
       </section>
@@ -83,7 +83,7 @@
       <section id="article-export">
         <!-- DONE: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
         <!-- Completed in about 5 minutes. Used <input> to hold JSON data -->
-        <label> JSON Format:
+        <label id="json-label"> JSON Format:
           <input type="text" id="article-json" value="">
         </label>
       </section>
